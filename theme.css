@@ -1,0 +1,334 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* Typography scale variables */
+  --text-2xl: 36px;
+  --text-xl: 30px;
+  --text-lg: 24px;
+  --text-base: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  
+  /* The default background color for the application. */
+  --background: rgba(255, 255, 255, 1.00);
+  /* The default color for elements or text that appears on top of the background. */
+  --foreground: rgba(9, 9, 11, 1.00);
+  /* The background color for cards, modals, and other containers. */
+  --card: rgba(255, 255, 255, 1.00);
+  /* The default color for text or elements that appear on top of cards, modals and other background containers. */
+  --card-foreground: rgba(9, 9, 11, 1.00);
+  /* The background color for dropdowns and tooltips. */
+  --popover: rgba(250, 250, 250, 1.00);
+  /* The default color for text or elements that appear on top of dropdowns and tooltips. */
+  --popover-foreground: rgba(9, 9, 11, 1.00);
+  /* The primary color used for buttons, links, and other interactive elements. */
+  --primary: rgba(24, 24, 27, 1.00);
+  /* The default color for text or elements that appear on top of primary colored elements. */
+  --primary-foreground: rgba(255, 255, 255, 1.00);
+  /* The secondary color used for secondary buttons and interactive elements. */
+  --secondary: rgba(228, 228, 231, 1.00);
+  /* The default color for text or elements that appear on top of secondary colored elements. */
+  --secondary-foreground: rgba(9, 9, 11, 1.00);
+  /* The muted color used for less prominent elements, such as disabled buttons or disabled text. */
+  --muted: rgba(244, 244, 245, 1.00);
+  /* The default color for text or elements that appear on top of muted colored elements. */
+  --muted-foreground: rgba(161, 161, 170, 1.00);
+  /* The accent color for highlights, active states, and logo branding. Indigo 600. */
+  --accent: rgba(79, 70, 229, 1.00);
+  /* The default color for text or elements that appear on top of accent colored elements. */
+  --accent-foreground: rgba(255, 255, 255, 1.00);
+  /* The default border color for elements such as inputs, buttons, and other containers. */
+  --border: rgba(228, 228, 231, 1.00);
+  /* The border color for info states and focused input fields. From Figma: Border/Extensions/borderInfo */
+  --border-info: rgba(91, 141, 239, 1.00);
+  /* The foreground color for text on border-info colored backgrounds. */
+  --border-info-foreground: rgba(255, 255, 255, 1.00);
+  /* The border color for error states, validation errors. From Figma: Border/Extensions/borderError. #EF4444 */
+  --border-error: rgba(239, 68, 68, 1.00);
+  /* The foreground color for text on border-error colored backgrounds. */
+  --border-error-foreground: rgba(255, 255, 255, 1.00);
+  /* The border color for warning states. From Figma: Border/Extensions/borderWarning. Amber 500 #F59E0B */
+  --border-warning: rgba(245, 158, 11, 1.00);
+  /* The foreground color for text on border-warning colored backgrounds. */
+  --border-warning-foreground: rgba(255, 255, 255, 1.00);
+  /* The border color for success states, confirmations. From Figma: Border/Extensions/borderSuccess. Green 500 #22C55E */
+  --border-success: rgba(34, 197, 94, 1.00);
+  /* The foreground color for text on border-success colored backgrounds. */
+  --border-success-foreground: rgba(255, 255, 255, 1.00);
+  /* The focus ring color for interactive elements. Canonical Figma token. Uses border-info color. */
+  --focus: rgba(91, 141, 239, 1.00);
+  /* The default background color for input fields once the text has been filled. Should be either transparent or match the input-background. */
+  --input: rgba(255, 255, 255, 1.00);
+  /* The default background color for input fields, text areas, and other input elements. */
+  --input-background: rgba(255, 255, 255, 1.00);
+  /* The default font weight for medium text. */
+  --font-weight-medium: 500;
+  /* The default font weight for normal text. */
+  --font-weight-normal: 400;
+  /* Small shadow used for cards, modals, and other elevated elements. */
+  --elevation-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  /* The color for chart elements, such as a bar or line in a chart. */
+  --chart-1: rgba(59, 130, 246, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-2: rgba(34, 197, 94, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-3: rgba(245, 158, 11, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-4: rgba(168, 85, 247, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-5: rgba(236, 72, 153, 1.00);
+  /* The default border radius for elements such as buttons, tooltip, and other containers. */
+  --radius: 8px;
+  /* Larger radius used for card-like components. */
+  --radius-card: 12px;
+  /* Smaller radius used for badge components. */
+  --radius-badge: 6px;
+  /* The background color for sidebars, navigation menus, and other persistent elements. */
+  --sidebar: rgba(255, 255, 255, 1.00);
+  /* The default color for text or elements that appear on top of sidebars, navigation menus, and other persistent elements. */
+  --sidebar-foreground: rgba(9, 9, 11, 1.00);
+  /* The primary color used for buttons, links, and other interactive elements in sidebars and navigation menus. */
+  --sidebar-primary: rgba(9, 9, 11, 1.00);
+  /* The default color for text or elements that appear on top of primary colored elements in sidebars and navigation menus. */
+  --sidebar-primary-foreground: rgba(255, 255, 255, 1.00);
+  /* The accent color used for highlights, links, and other interactive elements in sidebars and navigation menus. */
+  --sidebar-accent: rgba(0, 0, 0, 0.03);
+  /* The default color for text or elements that appear on top of accent colored elements in sidebars and navigation menus. */
+  --sidebar-accent-foreground: rgba(113, 113, 122, 1.00);
+  /* The default border color for elements in sidebars and navigation menus. */
+  --sidebar-border: rgba(228, 228, 231, 1.00);
+  /* The default color for focus rings, outlines, and other focus indicators in sidebars and navigation menus. */
+  --sidebar-ring: rgba(91, 141, 239, 1.00);
+}
+
+.dark {
+  --background: rgba(9, 9, 11, 1.00);
+  --foreground: rgba(250, 250, 250, 1.00);
+  --card: rgba(24, 24, 27, 1.00);
+  --card-foreground: rgba(250, 250, 250, 1.00);
+  --popover: rgba(39, 39, 42, 1.00);
+  --popover-foreground: rgba(250, 250, 250, 1.00);
+  --primary: rgba(250, 250, 250, 1.00);
+  --primary-foreground: rgba(9, 9, 11, 1.00);
+  --secondary: rgba(39, 39, 42, 1.00);
+  --secondary-foreground: rgba(250, 250, 250, 1.00);
+  --muted: rgba(39, 39, 42, 1.00);
+  --muted-foreground: rgba(161, 161, 170, 1.00);
+  --accent: rgba(99, 102, 241, 1.00);
+  --accent-foreground: rgba(255, 255, 255, 1.00);
+  --border: rgba(39, 39, 42, 1.00);
+  --border-info: rgba(91, 141, 239, 1.00);
+  --border-info-foreground: rgba(255, 255, 255, 1.00);
+  --border-error: rgba(239, 68, 68, 1.00);
+  --border-error-foreground: rgba(255, 255, 255, 1.00);
+  --border-warning: rgba(245, 158, 11, 1.00);
+  --border-warning-foreground: rgba(255, 255, 255, 1.00);
+  --border-success: rgba(34, 197, 94, 1.00);
+  --border-success-foreground: rgba(255, 255, 255, 1.00);
+  --focus: rgba(91, 141, 239, 1.00);
+  --input: rgba(39, 39, 42, 1.00);
+  --input-background: rgba(39, 39, 42, 1.00);
+  --elevation-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: rgba(59, 130, 246, 1.00);
+  --chart-2: rgba(34, 197, 94, 1.00);
+  --chart-3: rgba(245, 158, 11, 1.00);
+  --chart-4: rgba(168, 85, 247, 1.00);
+  --chart-5: rgba(236, 72, 153, 1.00);
+  --sidebar: rgba(24, 24, 27, 1.00);
+  --sidebar-foreground: rgba(250, 250, 250, 1.00);
+  --sidebar-primary: rgba(250, 250, 250, 1.00);
+  --sidebar-primary-foreground: rgba(9, 9, 11, 1.00);
+  --sidebar-accent: rgba(39, 39, 42, 1.00);
+  --sidebar-accent-foreground: rgba(161, 161, 170, 1.00);
+  --sidebar-border: rgba(39, 39, 42, 1.00);
+  --sidebar-ring: rgba(91, 141, 239, 1.00);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-border-info: var(--border-info);
+  --color-border-info-foreground: var(--border-info-foreground);
+  --color-border-error: var(--border-error);
+  --color-border-error-foreground: var(--border-error-foreground);
+  --color-border-warning: var(--border-warning);
+  --color-border-warning-foreground: var(--border-warning-foreground);
+  --color-border-success: var(--border-success);
+  --color-border-success-foreground: var(--border-success-foreground);
+  --color-focus: var(--focus);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-card);
+  --radius-xl: calc(var(--radius-card) + 4px);
+  --radius-badge: var(--radius-badge);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-focus/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    label {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: var(--text-sm);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Sonner Toast Notifications */
+[data-sonner-toast] {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+[data-sonner-toast][data-type="success"] {
+  background-color: var(--border-success) !important;
+  border-color: var(--border-success) !important;
+  color: var(--border-success-foreground) !important;
+}
+
+[data-sonner-toast][data-type="success"] [data-title],
+[data-sonner-toast][data-type="success"] [data-description] {
+  color: var(--border-success-foreground) !important;
+}
+
+[data-sonner-toast][data-type="error"] {
+  background-color: var(--border-error) !important;
+  border-color: var(--border-error) !important;
+  color: var(--border-error-foreground) !important;
+}
+
+[data-sonner-toast][data-type="error"] [data-title],
+[data-sonner-toast][data-type="error"] [data-description] {
+  color: var(--border-error-foreground) !important;
+}
+
+[data-sonner-toast][data-type="info"] {
+  background-color: var(--border-info) !important;
+  border-color: var(--border-info) !important;
+  color: var(--border-info-foreground) !important;
+}
+
+[data-sonner-toast][data-type="info"] [data-title],
+[data-sonner-toast][data-type="info"] [data-description] {
+  color: var(--border-info-foreground) !important;
+}
+
+/* Radix UI Portals - Ensure they're visible */
+[data-radix-popper-content-wrapper] {
+  z-index: 9999 !important;
+}
+
+/* Tooltip styling */
+[data-radix-tooltip-content] {
+  z-index: 9999 !important;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+}
+
+/* Popover styling */
+[data-radix-popover-content] {
+  z-index: 9999 !important;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+}
+
+/* Hover Card styling */
+[data-radix-hover-card-content] {
+  z-index: 9999 !important;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+}
