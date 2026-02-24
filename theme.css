@@ -38,6 +38,8 @@
   --brand: rgba(21, 40, 255, 1.00);
   /* The default color for text or elements that appear on top of brand colored elements. */
   --brand-foreground: rgba(255, 255, 255, 1.00);
+  /* Subtle brand-tinted background for selected/focused menu items. Indigo 100 #E0E7FF. */
+  --brand-highlight: rgba(224, 231, 255, 1.00);
   /* The default border color for elements such as inputs, buttons, and other containers. */
   --border: rgba(228, 228, 231, 1.00);
   /* The border color for info states and focused input fields. From Figma: Border/Extensions/borderInfo */
@@ -117,6 +119,7 @@
   --muted-foreground: rgba(161, 161, 170, 1.00);
   --brand: rgba(61, 79, 255, 1.00);
   --brand-foreground: rgba(255, 255, 255, 1.00);
+  --brand-highlight: rgba(61, 79, 255, 0.15);
   --border: rgba(39, 39, 42, 1.00);
   --border-info: rgba(91, 141, 239, 1.00);
   --border-info-foreground: rgba(255, 255, 255, 1.00);
@@ -162,6 +165,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
+  --color-brand-highlight: var(--brand-highlight);
   --color-border: var(--border);
   --color-border-info: var(--border-info);
   --color-border-info-foreground: var(--border-info-foreground);
